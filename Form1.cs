@@ -32,25 +32,25 @@ namespace WindowsFormsApplication3
                     decimal hoursWorked = Convert.ToDecimal(txtHoursWorked.Text);
                     decimal salesRevenue = Convert.ToDecimal(txtSalesRevenue.Text);
 
-                    decimal compensation = 0;
+                    decimal commission = 0;
                     decimal totalPay = 0;
                     decimal commissionForSalaried = .02m;
                     decimal commissionForHourly = .01m;
 
                     if (employeeType == "S")
                     {
-                        compensation = (salesRevenue * commissionForSalaried);
-                        totalPay = compensation + 300;
+                        commission = (salesRevenue * commissionForSalaried);
+                        totalPay = commission + 300;
                     }
                     else if (employeeType == "C")
                     {
-                        compensation = (salesRevenue * commissionForHourly);
-                        totalPay = compensation + (hoursWorked * 12);
+                        commission = (salesRevenue * commissionForHourly);
+                        totalPay = commission + (hoursWorked * 12);
                     }
                     else if (employeeType == "N")
                     {
-                        compensation = 0;
-                        totalPay = compensation + (hoursWorked * 16);
+                        commission = 0;
+                        totalPay = commission + (hoursWorked * 16);
                     }
                     else
                     {
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication3
                     txtEmployeeType.Text = employeeType.ToString();
                     txtHoursWorked.Text = hoursWorked.ToString();
                     txtSalesRevenue.Text = salesRevenue.ToString();
-                    txtSalesCommission.Text = compensation.ToString("c");
+                    txtSalesCommission.Text = commission.ToString("c");
                     txtTotalPay.Text = totalPay.ToString("c");
 
                 }
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication3
 
                 IsPresent(txtSalesRevenue, "Sales Revenue") &&
                 IsDecimal(txtSalesRevenue, "Sales Revenue") &&
-                IsWithinRange(txtSalesRevenue, "Sales Revenue", 0, 100000);
+                IsWithinRange(txtSalesRevenue, "Sales Revenue", 0, 900000);
         }
 
         public bool IsPresent(TextBox textBox, string name)
@@ -129,7 +129,5 @@ namespace WindowsFormsApplication3
             }
             return true;
         }
-        
-        
     }
 }
