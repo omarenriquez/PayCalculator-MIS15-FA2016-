@@ -89,7 +89,7 @@ namespace WindowsFormsApplication3
 
                 IsPresent(txtSalesRevenue, "Sales Revenue") &&
                 IsDecimal(txtSalesRevenue, "Sales Revenue") &&
-                IsWithinRange(txtSalesRevenue, "Sales Revenue", 0, 900000);
+                IsWithinRange(txtSalesRevenue, "Sales Revenue", 0, 999999);
         }
 
         public bool IsPresent(TextBox textBox, string name)
