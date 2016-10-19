@@ -70,6 +70,7 @@
             this.txtEmployeeType.Name = "txtEmployeeType";
             this.txtEmployeeType.Size = new System.Drawing.Size(100, 20);
             this.txtEmployeeType.TabIndex = 0;
+            this.txtEmployeeType.TextChanged += new System.EventHandler(this.ClearTotals);
             // 
             // txtHoursWorked
             // 
@@ -77,6 +78,7 @@
             this.txtHoursWorked.Name = "txtHoursWorked";
             this.txtHoursWorked.Size = new System.Drawing.Size(100, 20);
             this.txtHoursWorked.TabIndex = 1;
+            this.txtHoursWorked.TextChanged += new System.EventHandler(this.ClearTotals);
             // 
             // txtSalesRevenue
             // 
@@ -84,6 +86,7 @@
             this.txtSalesRevenue.Name = "txtSalesRevenue";
             this.txtSalesRevenue.Size = new System.Drawing.Size(100, 20);
             this.txtSalesRevenue.TabIndex = 2;
+            this.txtSalesRevenue.TextChanged += new System.EventHandler(this.ClearTotals);
             // 
             // txtSalesCommission
             // 
@@ -169,7 +172,7 @@
             this.Controls.Add(this.btnCalculate);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Pay Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

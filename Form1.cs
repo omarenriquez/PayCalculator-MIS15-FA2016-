@@ -129,5 +129,11 @@ namespace WindowsFormsApplication3
             }
             return true;
         }
+
+        private void ClearTotals(object sender, EventArgs e)
+        {
+            txtSalesCommission.Text = "";
+            txtTotalPay.Text = "";
+        }
     }
 }
